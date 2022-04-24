@@ -1,5 +1,6 @@
 import discord
-token = 'OTY3MDYyMDczOTI4NDY2NTAy.YmK0vQ.Do1V3UK-B7qQ-mSsb26o_oyAong' #봇 토큰
+import os
+token = 'aeccss_token' #봇 토큰
 client = discord.Client()
 
 
@@ -40,5 +41,5 @@ async def on_message(message):
         await message.channel.purge(limit=number)
         await message.channel.send(f"{number}개의 채팅을 삭제했다 말보다는 행동이지.")
 
-
+access_token = os.environ["BOT_TOKEN"]
 client.run(token)
